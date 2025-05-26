@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Monster Ball Market Mod</title>
+  <id>monsterball_market_mod</id>
+  <author>Ant2357</author>
+  <loadPriority>100</loadPriority>
+  <tags>QoL,Item</tags>
+  <description>This is a mod that ensures Monster Balls are always sold at every item shop, salesman, and general store.</description>
+  <version>0.23.140</version>
+</Meta>

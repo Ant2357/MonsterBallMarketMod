@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Sdk Name="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <TargetFramework>net481</TargetFramework>
+    <LangVersion>13.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SteamPath>C:/Program Files (x86)/Steam</SteamPath>
+    <ElinPath>$(SteamPath)/steamapps/common/Elin</ElinPath>
+    <ModPath>$(ElinPath)/Package/$(MSBuildProjectName)</ModPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(ElinPath)/Elin_Data/Managed/UnityEngine*.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(ElinPath)/BepInEx/core/BepInEx*.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(ElinPath)/BepInEx/core/0Harmony.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(ElinPath)/Elin_Data/Managed/Elin.dll">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="$(ElinPath)/Elin_Data/Managed/Plugins*.dll">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="RemoveFiles" BeforeTargets="BeforeBuild">
+    <RemoveDir Directories="$(TargetDir)" />
+    <RemoveDir Directories="$(ModPath)" />
+  </Target>
+
+  <Target Name="CopyFiles" AfterTargets="AfterBuild">
+    <MakeDir Directories="$(ModPath)" />
+
+    <ItemGroup>
+      <Dlls Include="$(TargetDir)/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Dlls)" DestinationFolder="$(ModPath)" />
+
+    <Copy SourceFiles="package.xml;" DestinationFolder="$(ModPath)" />
+    <Copy SourceFiles="preview.jpg" DestinationFolder="$(ModPath)" Condition="Exists('preview.jpg')" />
+
+    <ItemGroup>
+      <Paths Include="Texture/**/*" />
+      <Paths Include="Texture Replace/**/*" />
+      <Paths Include="Portrait/**/*" />
+      <Paths Include="Lang/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Paths)" DestinationFolder="$(ModPath)/%(Paths.RelativeDir)" />
+  </Target>
+</Project>
