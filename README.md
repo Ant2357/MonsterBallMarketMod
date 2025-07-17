@@ -1,10 +1,14 @@
-# Monster Ball Market Mod
-![中世ファンタジー風の道具屋でモンスターボールが棚に並んでいるドット絵イラスト](preview.png "中世ファンタジー風の道具屋でモンスターボールが棚に並んでいるドット絵イラスト")
+<div align="center">
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3498201295">
+    <img alt="中世ファンタジー風の道具屋でモンスターボールが棚に並んでいるドット絵イラスト" src="preview.jpg">
+  </a>
+</eiv>
 
-> “It's best to have your tools with you. If you don't, you're apt to find something you didn't expect and get discouraged.” — Stephen King
+<h2 align="center">
+  Monster Ball Market Mod
+</h2>
 
-> “常に道具を持っているのが最良だ。そうでなければ、思わぬものに出くわしてやる気を失ってしまう可能性がある。“ — スティーヴン・キング
-
-This is a mod that ensures Monster Balls are always sold at every goods shop, salesclerk, and general shop.
-
-Elin にて、モンスターボールが全ての道具屋・セールスマン・何でも屋で常時販売されるようにする Mod です。
+<div align="center">
+  <p>This is a mod that ensures Monster Balls are always sold at every goods shop, salesclerk, and general shop.</p>
+  <p>Elin にて、モンスターボールが全ての道具屋・セールスマン・何でも屋で常時販売されるようにする Mod です。</p>
+</div>
