@@ -2,7 +2,7 @@
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3498201295">
     <img alt="中世ファンタジー風の道具屋でモンスターボールが棚に並んでいるドット絵イラスト" src="preview.jpg">
   </a>
-</eiv>
+</div>
 
 <h2 align="center">
   Monster Ball Market Mod
